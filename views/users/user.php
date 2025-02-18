@@ -8,6 +8,7 @@
             <th scope="col">id</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
+            <th scope="col">Password</th>
             <th scope="col">Role</th>
             <th scope="col">Action</th>
         </tr>
@@ -18,6 +19,7 @@
                 <td><?php echo $index + 1 ?></td>
                 <td><?php echo $user['name']; ?></td>
                 <td><?php echo $user['email']; ?></td>
+                <td><?php echo $user['password']; ?></td>
                 <td><?php echo $user['role']; ?></td>
             <!-- delete and edite -->
                 <td>

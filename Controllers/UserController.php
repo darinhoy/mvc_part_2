@@ -54,9 +54,10 @@ class UserController extends BaseController
     {
         $name = $_POST['name'];
         $email = $_POST['email'];
+        $password = $_POST['pswd'];
         $role = $_POST['role'];
-        // $passwordEnypt = password_hash($password, PASSWORD_BCRYPT);
-        $this->users->updateUser($id, $name, $email, $role);
+        $passwordEnypt = password_hash($password, PASSWORD_BCRYPT);
+        $this->users->updateUser($id, $name, $email,$passwordEnypt, $role);
         $this->redirect('/user');
     }
 
@@ -67,11 +68,12 @@ class UserController extends BaseController
     {
         $name = htmlspecialchars( $_POST['name']);
         $email = htmlspecialchars($_POST['email']);
+        $passwordl = htmlspecialchars($_POST['pswd']);
         $role = htmlspecialchars($_POST['role']);
         // echo $password;
-        // $passwordEnypt = password_hash($password, PASSWORD_BCRYPT);
+        $passwordEnypt = password_hash($password, PASSWORD_BCRYPT);
         // echo $passwordEnypt; die;
-        $this->users->addUser($name, $email, $role);
+        $this->users->addUser($name, $passwordEnypt, $email, $role);
         $this->redirect('/user');
     }
 }

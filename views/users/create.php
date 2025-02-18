@@ -10,7 +10,10 @@
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" placeholder="email" name="email">
         </div>
-       
+        <div class="mb-3">
+    <label for="pwd" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+  </div>
         <div class="mb-3">
             <label for="role" class="form-label">Role</label>
             <input type="role" class="form-control" id="role" placeholder="role" name ="role">
