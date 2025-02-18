@@ -74,10 +74,10 @@ class UserModel {
      * @param float $price The price of the product.
      * @param string $description A description of the product.
      */
-    public function updateUser($id, $name,$password, $email, $role)
+    public function updateUser($id, $name,$email, $password, $role)
     {
         try {
-            $this->db->query("UPDATE users SET name = :name, email = :email,  role = :role WHERE id = :id", [
+            $this->db->query("UPDATE users SET name = :name, email = :email, password = :password, role = :role WHERE id = :id", [
                 ':id' => $id,
                 ':name' => $name,
                 ':email' => $email,

@@ -52,12 +52,13 @@ class UserController extends BaseController
      */
     public function update($id)
     {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['pswd'];
-        $role = $_POST['role'];
-        $passwordEnypt = password_hash($password, PASSWORD_BCRYPT);
-        $this->users->updateUser($id, $name, $email,$passwordEnypt, $role);
+        $id = htmlspecialchars($_POST['id']);
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $password = htmlspecialchars($_POST['password']);
+        $role = htmlspecialchars($_POST['role']);
+        $password = password_hash($password, PASSWORD_BCRYPT);
+        $this->users->updateUser($id, $name, $email,$password, $role);
         $this->redirect('/user');
     }
 
