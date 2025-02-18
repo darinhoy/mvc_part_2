@@ -15,7 +15,7 @@
 
         <div class="mb-3">
             <label for="pwd" class="form-label">Password</label>
-            <input type="password" class="form-control" id="pwd" name="password">
+            <input type="password" class="form-control" id="pwd" name="password" value="<?= $user['password'] ?>">
         </div>
 
         <div class="mb-3">

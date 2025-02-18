@@ -1,7 +1,8 @@
 
-<div class="container">
+<div>
     <h1>Users List</h1>
     <a href="/user/create" class="btn btn-primary">Create User</a>
+<!-- </div> -->
     <table class="table">
     <thead>
         <tr>
@@ -29,6 +30,6 @@
             </tr>
         <?php endforeach; ?>
     </tbody>
-</table>
+  </table>
 </div>
 
